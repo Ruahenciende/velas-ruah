@@ -1,4 +1,3 @@
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,8 +47,8 @@
             border-radius: 4px;
         }
         .bg-watermark {
-            background-image: radial-gradient(circle, rgba(212,175,55,0.04) 1px, transparent 1px);
-            background-size: 24px 24px;
+            background-image: radial-gradient(circle, rgba(212,175,55,0.06) 1px, transparent 1px);
+            background-size: 28px 28px;
         }
     </style>
 </head>
@@ -77,41 +76,62 @@
                 </div>
             </div>
             
-            <button onclick="toggleCartModal()" class="relative p-2.5 text-ruahDark hover:text-ruahRed transition-colors rounded-full hover:bg-amber-50 flex items-center gap-2">
-                <i class="fa-solid fa-basket-shopping text-2xl text-amber-700"></i>
-                <span id="cartBadge" class="absolute -top-1 -right-1 bg-ruahRed text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
-            </button>
+            <div class="flex items-center gap-2">
+                <a href="#catalogo" class="hidden sm:inline-flex text-xs font-semibold text-amber-900 bg-amber-100 hover:bg-amber-200 px-3 py-2 rounded-xl transition">
+                    Ver Catálogo
+                </a>
+                <button onclick="toggleCartModal()" class="relative p-2.5 text-ruahDark hover:text-ruahRed transition-colors rounded-full hover:bg-amber-50 flex items-center gap-2">
+                    <i class="fa-solid fa-basket-shopping text-2xl text-amber-700"></i>
+                    <span id="cartBadge" class="absolute -top-1 -right-1 bg-ruahRed text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Hero Banner -->
-    <section class="relative bg-gradient-to-r from-ruahGreen via-emerald-900 to-ruahGreen text-white py-10 px-4 text-center overflow-hidden shadow-inner">
+    <section class="relative bg-gradient-to-r from-ruahGreen via-emerald-900 to-ruahGreen text-white py-12 px-4 text-center overflow-hidden shadow-inner">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="relative max-w-2xl mx-auto space-y-3">
+        <div class="relative max-w-2xl mx-auto space-y-4">
             <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-400/30 rounded-full text-xs font-semibold tracking-wider uppercase">
                 🎄 Lista de Precios Navideña 2026 🎄
             </span>
-            <h2 class="text-3xl md:text-4xl font-brand font-bold text-amber-100">Velas Artesanales Ruah</h2>
+            <h2 class="text-3xl md:text-5xl font-brand font-bold text-amber-100 leading-tight">Velas Artesanales Ruah</h2>
             <p class="text-sm md:text-base text-amber-100/90 font-light max-w-lg mx-auto">
                 Elige tus piezas, personaliza el aroma de temporada para cada una y envíanos tu pedido por WhatsApp al <strong class="text-amber-200">5558005461</strong>.
             </p>
+            <div class="pt-2 flex justify-center gap-3">
+                <a href="#catalogo" class="bg-ruahGold hover:bg-amber-600 text-ruahDark font-bold text-xs md:text-sm px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+                    Hacer Pedido Ahora ✨
+                </a>
+            </div>
         </div>
     </section>
 
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-10 flex-grow relative">
+    <main id="catalogo" class="max-w-4xl mx-auto px-4 py-8 space-y-10 flex-grow relative">
 
         <!-- Info Aromas Disponibles -->
-        <section class="bg-amber-50/80 backdrop-blur border border-amber-200 rounded-2xl p-5 shadow-sm">
-            <div class="flex items-center space-x-3 mb-2">
+        <section class="bg-amber-50/90 backdrop-blur border border-amber-200/80 rounded-2xl p-5 shadow-sm space-y-3">
+            <div class="flex items-center space-x-3">
                 <i class="fa-solid fa-wand-magic-sparkles text-ruahGold text-xl"></i>
-                <h3 class="font-brand font-bold text-lg text-ruahDark">Aromas de Temporada Disponibles</h3>
+                <h3 class="font-brand font-bold text-lg text-ruahDark">Aromas Disponibles</h3>
             </div>
-            <p class="text-xs text-gray-600 mb-3">Puedes elegir un aroma diferente para cada vela o figura al momento de agregarla o en tu carrito:</p>
-            <div class="flex flex-wrap gap-2">
-                <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1 rounded-xl text-xs font-medium">🍎 Manzana Canela</span>
-                <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1 rounded-xl text-xs font-medium">🍦 Vainilla Canela</span>
-                <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1 rounded-xl text-xs font-medium">🥧 Tarta Navideña</span>
-                <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1 rounded-xl text-xs font-medium">🌲 Ponche y Pino</span>
+            <p class="text-xs text-gray-600">Puedes elegir un aroma de temporada para cada vela o figura al momento de agregarla o en tu carrito:</p>
+            
+            <!-- Aromas Navideños / Temporada -->
+            <div class="space-y-1.5">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800">🎄 Aromas de Temporada Navideña</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍎 Manzana Canela</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍦 Vainilla Canela</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🥧 Tarta Navideña</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🌲 Ponche y Pino</span>
+                </div>
+            </div>
+
+            <!-- Aromas Clásicos -->
+            <div class="pt-2 border-t border-amber-200/50 flex items-center gap-2 text-xs text-amber-900">
+                <i class="fa-solid fa-sparkles text-ruahGold"></i>
+                <span>También contamos con una amplia variedad de <strong>aromas clásicos</strong>. ¡Pregúntanos por disponibilidad al hacer tu pedido!</span>
             </div>
         </section>
 
@@ -243,14 +263,21 @@
             { id: 'c-1', name: 'Base Tronco para Figuras', price: 30, category: 'complement', icon: '🪵', desc: 'Complemento de madera natural' }
         ];
 
-        const aromasList = ['Manzana Canela', 'Vainilla Canela', 'Tarta Navideña', 'Ponche y Pino'];
+        const aromasList = [
+            'Manzana Canela',
+            'Vainilla Canela',
+            'Tarta Navideña',
+            'Ponche y Pino',
+            'Aroma Clásico (A coordinar)'
+        ];
 
-        // Cart items structure: Array of objects { cartId, id, name, price, icon, qty, aroma }
         let cart = [];
 
         function renderProducts() {
             const specialGrid = document.getElementById('specialCandlesGrid');
             const individualGrid = document.getElementById('individualFiguresGrid');
+
+            if (!specialGrid || !individualGrid) return;
 
             specialGrid.innerHTML = '';
             individualGrid.innerHTML = '';
@@ -275,13 +302,18 @@
                         <div class="space-y-1">
                             <label class="text-[11px] font-semibold text-gray-600">Aroma para esta pieza:</label>
                             <select id="select-aroma-${p.id}" class="w-full text-xs px-2.5 py-1.5 border border-amber-200 rounded-lg bg-amber-50/50 focus:outline-none focus:ring-1 focus:ring-ruahGold">
-                                ${aromasList.map(a => `<option value="${a}">${a}</option>`).join('')}
+                                ${aromasList.map(a => {
+                                    if (a.startsWith('---')) {
+                                        return `<option disabled class="font-bold text-amber-800 bg-amber-100/50">${a}</option>`;
+                                    }
+                                    return `<option value="${a}">${a}</option>`;
+                                }).join('')}
                             </select>
                         </div>
                         ` : ''}
 
-                        <button onclick="addToCart('${p.id}')" class="w-full bg-ruahGold hover:bg-amber-600 text-white font-medium text-xs py-2 rounded-xl transition shadow-sm flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-plus"><span>Agregar al Pedido</span></i>
+                        <button onclick="addToCart('${p.id}')" class="w-full bg-ruahGold hover:bg-amber-600 text-white font-medium text-xs py-2.5 rounded-xl transition shadow-sm flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-plus"></i><span>Agregar al Pedido</span>
                         </button>
                     </div>
                 `;
@@ -306,7 +338,6 @@
                 aroma = 'N/A (Madera)';
             }
 
-            // Check if same product with same aroma already exists in cart
             const existingIndex = cart.findIndex(item => item.id === productId && item.aroma === aroma);
 
             if (existingIndex > -1) {
@@ -329,6 +360,7 @@
         function addBaseTronco() {
             addToCart('c-1');
             const btn = event.currentTarget;
+            if (!btn) return;
             const originalText = btn.innerText;
             btn.innerText = "¡Agregado! ✓";
             btn.classList.add('bg-emerald-800');
@@ -382,6 +414,7 @@
 
         function renderCartModalList() {
             const container = document.getElementById('cartItemsList');
+            if (!container) return;
 
             if (cart.length === 0) {
                 container.innerHTML = `
@@ -414,7 +447,12 @@
                         <div class="flex items-center gap-2 pt-1 border-t border-gray-200/60">
                             <span class="text-[11px] text-gray-500 font-medium">Aroma:</span>
                             <select onchange="updateCartItemAroma(${item.cartId}, this.value)" class="text-xs px-2 py-1 bg-white border border-amber-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-ruahGold">
-                                ${aromasList.map(a => `<option value="${a}" ${item.aroma === a ? 'selected' : ''}>${a}</option>`).join('')}
+                                ${aromasList.map(a => {
+                                    if (a.startsWith('---')) {
+                                        return `<option disabled class="font-bold text-amber-800 bg-amber-100/50">${a}</option>`;
+                                    }
+                                    return `<option value="${a}" ${item.aroma === a ? 'selected' : ''}>${a}</option>`;
+                                }).join('')}
                             </select>
                         </div>
                         ` : ''}
@@ -437,6 +475,7 @@
         function toggleCartModal() {
             const modal = document.getElementById('cartModal');
             const panel = document.getElementById('cartPanel');
+            if (!modal || !panel) return;
 
             if (modal.classList.contains('opacity-0')) {
                 modal.classList.remove('opacity-0', 'pointer-events-none');
@@ -450,16 +489,20 @@
         function sendWhatsAppOrder() {
             if (cart.length === 0) {
                 const container = document.getElementById('cartItemsList');
-                const alertBox = document.createElement('div');
-                alertBox.className = 'bg-red-50 border border-red-200 text-red-700 p-3 rounded-xl text-xs text-center font-medium my-2';
-                alertBox.innerText = 'Por favor agrega al menos un producto a tu pedido antes de enviar.';
-                container.prepend(alertBox);
-                setTimeout(() => alertBox.remove(), 3000);
+                if (container) {
+                    const alertBox = document.createElement('div');
+                    alertBox.className = 'bg-red-50 border border-red-200 text-red-700 p-3 rounded-xl text-xs text-center font-medium my-2';
+                    alertBox.innerText = 'Por favor agrega al menos un producto a tu pedido antes de enviar.';
+                    container.prepend(alertBox);
+                    setTimeout(() => alertBox.remove(), 3000);
+                }
                 return;
             }
 
-            const name = document.getElementById('customerName').value.trim() || 'Cliente Ruah';
-            const notes = document.getElementById('customerNotes').value.trim();
+            const nameInput = document.getElementById('customerName');
+            const notesInput = document.getElementById('customerNotes');
+            const name = nameInput ? nameInput.value.trim() || 'Cliente Ruah' : 'Cliente Ruah';
+            const notes = notesInput ? notesInput.value.trim() : '';
 
             let totalPrice = 0;
             let orderSummary = `✨ *NUEVO PEDIDO DE VELAS - RUAH* ✨\n`;
