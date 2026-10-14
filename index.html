@@ -124,14 +124,9 @@
                     <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍎 Manzana Canela</span>
                     <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍦 Vainilla Canela</span>
                     <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🥧 Tarta Navideña</span>
-                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🌲 Ponche y Pino</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍹 Ponche de Frutas</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🌲 Pino</span>
                 </div>
-            </div>
-
-            <!-- Aromas Clásicos -->
-            <div class="pt-2 border-t border-amber-200/50 flex items-center gap-2 text-xs text-amber-900">
-                <i class="fa-solid fa-sparkles text-ruahGold"></i>
-                <span>También contamos con una amplia variedad de <strong>aromas clásicos</strong>. ¡Pregúntanos por disponibilidad al hacer tu pedido!</span>
             </div>
         </section>
 
@@ -250,7 +245,7 @@
             { id: 'v-4', name: 'Set 3 Piezas', price: 500, category: 'special', icon: '🕯️', desc: 'Trío de velas navideñas coordinadas' },
             { id: 'v-5', name: 'Set Oso Polar', price: 350, category: 'special', icon: '🐻‍❄️', desc: 'Set especial temática Oso Polar' },
             { id: 'v-6', name: 'Set Oso Moño', price: 350, category: 'special', icon: '🧸', desc: 'Set especial Oso con Moño' },
-            { id: 'v-7', name: 'Vela Nochebuena CH', price: 300, category: 'special', icon: '🌸', desc: 'Vela chica de Nochebuena' },
+            { id: 'v-7', name: 'Vela Nochebuena CH', price: 300, category: 'special', icon: '🌺', desc: 'Vela chica de Nochebuena' },
             { id: 'v-8', name: 'Vela Pino', price: 270, category: 'special', icon: '🌲', desc: 'Diseño clásico de Pino de Navidad' },
 
             { id: 'f-1', name: 'Oso Polar', price: 120, category: 'individual', icon: '🐻', desc: 'Figura individual' },
@@ -267,8 +262,8 @@
             'Manzana Canela',
             'Vainilla Canela',
             'Tarta Navideña',
-            'Ponche y Pino',
-            'Aroma Clásico (A coordinar)'
+            'Ponche de Frutas',
+            'Pino'
         ];
 
         let cart = [];
@@ -302,12 +297,7 @@
                         <div class="space-y-1">
                             <label class="text-[11px] font-semibold text-gray-600">Aroma para esta pieza:</label>
                             <select id="select-aroma-${p.id}" class="w-full text-xs px-2.5 py-1.5 border border-amber-200 rounded-lg bg-amber-50/50 focus:outline-none focus:ring-1 focus:ring-ruahGold">
-                                ${aromasList.map(a => {
-                                    if (a.startsWith('---')) {
-                                        return `<option disabled class="font-bold text-amber-800 bg-amber-100/50">${a}</option>`;
-                                    }
-                                    return `<option value="${a}">${a}</option>`;
-                                }).join('')}
+                                ${aromasList.map(a => `<option value="${a}">${a}</option>`).join('')}
                             </select>
                         </div>
                         ` : ''}
@@ -447,12 +437,7 @@
                         <div class="flex items-center gap-2 pt-1 border-t border-gray-200/60">
                             <span class="text-[11px] text-gray-500 font-medium">Aroma:</span>
                             <select onchange="updateCartItemAroma(${item.cartId}, this.value)" class="text-xs px-2 py-1 bg-white border border-amber-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-ruahGold">
-                                ${aromasList.map(a => {
-                                    if (a.startsWith('---')) {
-                                        return `<option disabled class="font-bold text-amber-800 bg-amber-100/50">${a}</option>`;
-                                    }
-                                    return `<option value="${a}" ${item.aroma === a ? 'selected' : ''}>${a}</option>`;
-                                }).join('')}
+                                ${aromasList.map(a => `<option value="${a}" ${item.aroma === a ? 'selected' : ''}>${a}</option>`).join('')}
                             </select>
                         </div>
                         ` : ''}
