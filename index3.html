@@ -71,7 +71,7 @@
                     </svg>
                 </div>
                 <div class="flex flex-col">
-                    <h1 class="font-brand text-2xl md:text-3xl font-bold tracking-wider text-ruahDark">RUAH</h1>
+                    <h1 class="font-brand text-2xl md:text-3xl font-brand font-bold tracking-wider text-ruahDark">RUAH</h1>
                     <span class="text-[10px] md:text-xs font-semibold tracking-widest uppercase text-amber-800 -mt-1">Enciende el fuego</span>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             </span>
             <h2 class="text-3xl md:text-5xl font-brand font-bold text-amber-100 leading-tight">Velas Artesanales Ruah</h2>
             <p class="text-sm md:text-base text-amber-100/90 font-light max-w-lg mx-auto">
-                Elige tus piezas, personaliza el aroma de temporada para cada una y envíanos tu pedido por WhatsApp al <strong class="text-amber-200">5558005461</strong>.
+                Elige tus piezas, personaliza el aroma para cada una y envíanos tu pedido por WhatsApp al <strong class="text-amber-200">5558005461</strong>.
             </p>
             <div class="pt-2 flex justify-center gap-3">
                 <a href="#catalogo" class="bg-ruahGold hover:bg-amber-600 text-ruahDark font-bold text-xs md:text-sm px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
@@ -115,23 +115,26 @@
                 <i class="fa-solid fa-wand-magic-sparkles text-ruahGold text-xl"></i>
                 <h3 class="font-brand font-bold text-lg text-ruahDark">Aromas Disponibles</h3>
             </div>
-            <p class="text-xs text-gray-600">Puedes elegir un aroma de temporada para cada vela o figura al momento de agregarla o en tu carrito:</p>
+            <p class="text-xs text-gray-600">Puedes elegir entre nuestros aromas de temporada o un aroma clásico a coordinar para cada vela o figura:</p>
             
             <!-- Aromas Navideños / Temporada -->
             <div class="space-y-1.5">
                 <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800">🎄 Aromas de Temporada Navideña</span>
                 <div class="flex flex-wrap gap-2">
-                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍎 Manzana Canela</span>
-                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🍦 Vainilla Canela</span>
-                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🥧 Tarta Navideña</span>
-                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium shadow-2xs">🌲 Ponche y Pino</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium">🍎 Manzana Canela</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium">🍦 Vainilla Canela</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium">🥧 Tarta Navideña</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium">🍹 Ponche de Frutas</span>
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium">🌲 Pino</span>
                 </div>
             </div>
 
             <!-- Aromas Clásicos -->
-            <div class="pt-2 border-t border-amber-200/50 flex items-center gap-2 text-xs text-amber-900">
-                <i class="fa-solid fa-sparkles text-ruahGold"></i>
-                <span>También contamos con una amplia variedad de <strong>aromas clásicos</strong>. ¡Pregúntanos por disponibilidad al hacer tu pedido!</span>
+            <div class="space-y-1.5 pt-2 border-t border-amber-200/50">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800">✨ Aromas Clásicos (A pactar)</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white border border-amber-200 text-amber-900 px-3 py-1.5 rounded-xl text-xs font-medium">✨ Aroma Clásico (A coordinar por WhatsApp)</span>
+                </div>
             </div>
         </section>
 
@@ -250,7 +253,7 @@
             { id: 'v-4', name: 'Set 3 Piezas', price: 500, category: 'special', icon: '🕯️', desc: 'Trío de velas navideñas coordinadas' },
             { id: 'v-5', name: 'Set Oso Polar', price: 350, category: 'special', icon: '🐻‍❄️', desc: 'Set especial temática Oso Polar' },
             { id: 'v-6', name: 'Set Oso Moño', price: 350, category: 'special', icon: '🧸', desc: 'Set especial Oso con Moño' },
-            { id: 'v-7', name: 'Vela Nochebuena CH', price: 300, category: 'special', icon: '🌸', desc: 'Vela chica de Nochebuena' },
+            { id: 'v-7', name: 'Vela Nochebuena CH', price: 300, category: 'special', icon: '🌺', desc: 'Vela chica de Nochebuena' },
             { id: 'v-8', name: 'Vela Pino', price: 270, category: 'special', icon: '🌲', desc: 'Diseño clásico de Pino de Navidad' },
 
             { id: 'f-1', name: 'Oso Polar', price: 120, category: 'individual', icon: '🐻', desc: 'Figura individual' },
@@ -267,8 +270,9 @@
             'Manzana Canela',
             'Vainilla Canela',
             'Tarta Navideña',
-            'Ponche y Pino',
-            'Aroma Clásico (A coordinar)'
+            'Ponche de Frutas',
+            'Pino',
+            '✨ Aroma Clásico (A pactar por WhatsApp)'
         ];
 
         let cart = [];
@@ -302,12 +306,7 @@
                         <div class="space-y-1">
                             <label class="text-[11px] font-semibold text-gray-600">Aroma para esta pieza:</label>
                             <select id="select-aroma-${p.id}" class="w-full text-xs px-2.5 py-1.5 border border-amber-200 rounded-lg bg-amber-50/50 focus:outline-none focus:ring-1 focus:ring-ruahGold">
-                                ${aromasList.map(a => {
-                                    if (a.startsWith('---')) {
-                                        return `<option disabled class="font-bold text-amber-800 bg-amber-100/50">${a}</option>`;
-                                    }
-                                    return `<option value="${a}">${a}</option>`;
-                                }).join('')}
+                                ${aromasList.map(a => `<option value="${a}">${a}</option>`).join('')}
                             </select>
                         </div>
                         ` : ''}
@@ -447,12 +446,7 @@
                         <div class="flex items-center gap-2 pt-1 border-t border-gray-200/60">
                             <span class="text-[11px] text-gray-500 font-medium">Aroma:</span>
                             <select onchange="updateCartItemAroma(${item.cartId}, this.value)" class="text-xs px-2 py-1 bg-white border border-amber-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-ruahGold">
-                                ${aromasList.map(a => {
-                                    if (a.startsWith('---')) {
-                                        return `<option disabled class="font-bold text-amber-800 bg-amber-100/50">${a}</option>`;
-                                    }
-                                    return `<option value="${a}" ${item.aroma === a ? 'selected' : ''}>${a}</option>`;
-                                }).join('')}
+                                ${aromasList.map(a => `<option value="${a}" ${item.aroma === a ? 'selected' : ''}>${a}</option>`).join('')}
                             </select>
                         </div>
                         ` : ''}
